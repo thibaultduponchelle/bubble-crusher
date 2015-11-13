@@ -5,7 +5,9 @@
 This game is a clone of bubble explode (bubble pop) written in python.
 
 The goal of this game is to pop bubble to make shapes (shapes give more points).
+
 After a given period, bubbles falls from the top of the board.
+
 This game is very addictive on iphone that's why I have done it for your Linux distro guys !
 
 Try to explode as many as possible bubble to do the best score.
