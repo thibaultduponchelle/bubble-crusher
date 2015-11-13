@@ -1,0 +1,17 @@
+[general]
+width = 8
+game = classic
+height = 10
+type = 'colored'
+size = small
+
+[highscores]
+classic_extra_large = 0
+chillout_large = 0
+classic_large = 0
+classic_small = 0
+classic_medium = 0
+chillout_medium = 0
+chillout_small = 0
+chillout_extra_large = 0
+
