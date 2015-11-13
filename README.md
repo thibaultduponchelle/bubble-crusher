@@ -31,11 +31,9 @@ Try it !
 
 ![Simple square](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher1.png)
 ![Game over](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher2.png)
+![Big shape](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher4.png)
 ![Menu](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher3.png)
 
-![Big shape](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher4.png)
-
-![About](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher5.png)
 
 ##Generalities 
 
