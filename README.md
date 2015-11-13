@@ -34,12 +34,6 @@ Try it !
 ![Big shape](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher4.png)
 
 
-##Generalities 
-
-
-Hope you will enjoy it !
-
-
 ##Install
 
 As it's python + pygtk ... You need python (2.6 or 2.7 is ok) and pytgtk.
