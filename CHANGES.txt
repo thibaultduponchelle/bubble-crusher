@@ -1,0 +1,2 @@
+v0.92, 25/03/13 -- Finish packaging.
+v0.91, 01/10/12 -- Start packaging.
