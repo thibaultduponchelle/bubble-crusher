@@ -1,6 +1,6 @@
-#BUBBLE CRUSHER
+# BUBBLE CRUSHER
 
-##Description
+## Description
 
 This game is a clone of bubble explode (bubble pop) written in python.
 
@@ -27,14 +27,15 @@ This project is still under development so please report any bug or feature requ
 
 Try it !
 
-##Screenies 
+## Screenies 
 
 ![Simple square](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher1.png)
 ![Game over](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher2.png)
+
 ![Big shape](https://github.com/thibaultduponchelle/bubble-crusher/blob/master/bubblecrusher/screenies/bubblecrusher4.png)
 
 
-##Install
+## Install
 
 As it's python + pygtk ... You need python (2.6 or 2.7 is ok) and pytgtk.
 
@@ -52,12 +53,12 @@ Currently the config file is in this place too.
 A bash script is installed in a place like /usr/bin
 
 
-#Play
+# Play
 
 Simply run `bubblecrusher` from a terminal and have fun.
 
 
-#About
+# About
 
 As the company who developped this game refused to help me to do this port and to even mention its name, I have done everything including the graphix, logo, and so on.
 
