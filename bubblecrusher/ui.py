@@ -32,7 +32,7 @@ class interface(gtk.Window):
   def __init__(self):
     super(interface, self).__init__()
     self.install_path = os.path.dirname(inspect.getfile(inspect.currentframe()))      
-    print "I start from : %s" %(self.install_path)
+    #print "I start from : %s" %(self.install_path)
 
 
   
@@ -85,7 +85,7 @@ class interface(gtk.Window):
     authors = list()
     authors.append("Duponchelle Thibault <thibault.duponchelle@gmail.com>")
     dlg.set_authors(authors)
-    mylogo = gtk.gdk.pixbuf_new_from_file("/data/pixs/logo/logo.png")
+    mylogo = gtk.gdk.pixbuf_new_from_file(self.install_path + "/data/pixs/logo/logo.png")
     dlg.set_logo(mylogo)
     dlg.run()
     dlg.destroy()
@@ -213,7 +213,7 @@ class interface(gtk.Window):
     else:
       if (event.x > self.f.width * bubble_size - 50)and(event.x < self.f.width * bubble_size):
         if (event.y>0)and(event.y<50):
-            print 'undo !'
+            #print 'undo !'
             self.f = field.undo_field(self.history, self.f)
             self.old_score = self.f.score
             self.queue_draw()
@@ -226,14 +226,14 @@ class interface(gtk.Window):
           
           y = self.f.height + 1 - int(event.y / bubble_size)
           if  y >= self.c.height:
-            print "Out of board"
-            print "x : %d  y : %d   (%d)" %(x, y, self.c.height)
+            #print "Out of board"
+            #print "x : %d  y : %d   (%d)" %(x, y, self.c.height)
             return True
           if self.f.has_neighbors(int(x), int(y), self.f[x][y].color):
             self.history.save_state(self.f, self.f.p)
             self.history.xbubbles_purge()
             self.f.explode(int(x),int(y), self.history)
-            print self.f
+            #print self.f
             self.f.create_history_template(self.history)
             self.launch_timer()
     return True
@@ -374,8 +374,8 @@ class interface(gtk.Window):
   def print_finished_game_screen(self):
     # Afficher le Game Over
     img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/font/gameover_alpha.png') 
-    print self.w_width
-    print self.w_height
+    #print self.w_width
+    #print self.w_height
     self.cr.set_source_surface(img, self.w_width/2 - 100, self.w_height/8)
     self.cr.paint_with_alpha(1)
 

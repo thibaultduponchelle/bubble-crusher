@@ -42,12 +42,12 @@ class config():
 
 
   def __init__(self):
-    print "config __init__"
+    #print "config __init__"
     if os.path.exists(home + '/.bubblecrusher') == False:
-      print "create dir"
+      #print "create dir"
       os.mkdir(home + '/.bubblecrusher/')
     if os.path.exists(home + '/.bubblecrusher/bubble.cfg') == False:
-      print "create config file"
+      #print "create config file"
       file = open(home + '/.bubblecrusher/bubble.cfg', 'w+')
       file.write(template)
       file.close()

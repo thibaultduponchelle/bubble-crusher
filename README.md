@@ -41,7 +41,7 @@ As it's python + pygtk ... You need python (2.6 or 2.7 is ok) and pytgtk.
 
 And type :
 
-`sudo setup.py install`
+`sudo python setup.py install`
 
 
 The files will be installed somewhere on you machine. On mine it's here :
