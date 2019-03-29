@@ -22,7 +22,7 @@ setup(
     package_data={'bubblecrusher': ['data/pixs/*.*','data/pixs/font/*.*','data/pixs/logo/*.*']},
     #data_files=[(home + '/.bubblecrusher/', ['bubblecrusher/data/bubble.cfg'])],
     include_package_data = True,
-    long_description=read('README'),
+    long_description=read('README.md'),
     install_requires = ['PyGTK', 'setuptools'],
     scripts = ['scripts/bubblecrusher'],
     classifiers=[
