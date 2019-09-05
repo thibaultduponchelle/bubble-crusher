@@ -27,15 +27,9 @@ class interface(gtk.Window):
   timer_counter = 30  # A counter to always adjust the time for animation
   c = None        # Config object
   end = False     # A boolean to know if game is finished
-  install_path = ''
   
   def __init__(self):
     super(interface, self).__init__()
-    self.install_path = os.path.dirname(inspect.getfile(inspect.currentframe()))      
-    #print "I start from : %s" %(self.install_path)
-
-
-  
 
   def create_game(self):
     self.end = False
@@ -85,7 +79,7 @@ class interface(gtk.Window):
     authors = list()
     authors.append("Duponchelle Thibault <thibault.duponchelle@gmail.com>")
     dlg.set_authors(authors)
-    mylogo = gtk.gdk.pixbuf_new_from_file(self.install_path + "/data/pixs/logo/logo.png")
+    mylogo = gtk.gdk.pixbuf_new_from_file("bubblecrusher/data/pixs/logo/logo.png")
     dlg.set_logo(mylogo)
     dlg.run()
     dlg.destroy()
@@ -280,12 +274,11 @@ class interface(gtk.Window):
     alpha = 0
     # Previously, create a new ImageSurface inside the for loop was really slow for extra_size game mode...
     # Now I create only one time each ImageSurface and just choose which one must be used...
-    # print self.install_path + 'pixs/blue_alpha.png'
-    blue = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/blue_alpha.png') 
-    red = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/red_alpha.png') 
-    green = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/green_alpha.png') 
-    yellow = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/yellow_alpha.png') 
-    boum = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/boum_alpha_big.png')
+    blue = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/blue_alpha.png') 
+    red = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/red_alpha.png') 
+    green = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/green_alpha.png') 
+    yellow = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/yellow_alpha.png') 
+    boum = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/boum_alpha_big.png')
     for j in range(self.f.height-1, -1, -1):
       for i in range(0, len(self.f), 1):
         x = i * bubble_size +5
@@ -314,13 +307,13 @@ class interface(gtk.Window):
       y = 1* bubble_size 
       for i in range(self.f.width):
         x = i * bubble_size +5
-        img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/%s_alpha.png' % self.f.next_line[i].color) 
+        img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/%s_alpha.png' % self.f.next_line[i].color) 
         self.cr.move_to(x, y)
         self.cr.set_source_surface(img, x, y)
         self.cr.paint_with_alpha(0.5)
 
   def print_undo(self):
-    img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/undo.png') 
+    img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/undo.png') 
     self.cr.move_to(self.f.width * bubble_size - 50, 0)
     self.cr.set_source_surface(img, self.f.width * bubble_size - 50, 0)
     self.cr.paint_with_alpha(1)
@@ -373,24 +366,24 @@ class interface(gtk.Window):
 
   def print_finished_game_screen(self):
     # Afficher le Game Over
-    img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/font/gameover_alpha.png') 
+    img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/font/gameover_alpha.png') 
     #print self.w_width
     #print self.w_height
     self.cr.set_source_surface(img, self.w_width/2 - 100, self.w_height/8)
     self.cr.paint_with_alpha(1)
 
     # Afficher l'image score
-    img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/font/score_alpha.png') 
+    img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/font/score_alpha.png') 
     self.cr.set_source_surface(img, self.w_width/2 - 80, self.w_height/2.5)
     self.cr.paint_with_alpha(1)
     
     # Afficher l'image highscore
-    img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/font/highscore_alpha.png') 
+    img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/font/highscore_alpha.png') 
     self.cr.set_source_surface(img, self.w_width/2 - 100, self.w_height/2)
     self.cr.paint_with_alpha(1)
 
     # Afficher l'image retry
-    img = cairo.ImageSurface.create_from_png(self.install_path + '/data/pixs/font/retry_alpha.png') 
+    img = cairo.ImageSurface.create_from_png('bubblecrusher/data/pixs/font/retry_alpha.png') 
     self.cr.set_source_surface(img, self.w_width/2 - 100, self.w_height/1.5)
     self.cr.paint_with_alpha(1)
 
