@@ -47,6 +47,6 @@ And type :
 
 As the company who developped this game refused to help me to do this port and to even mention its name, I have done everything including the images, logo, and so on.
 
-Licence : **GPL v2+**
+Licence : **GPL v3+**
 
 
