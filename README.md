@@ -41,7 +41,7 @@ As it's python + pygtk ... You need python (2.6 or 2.7 is ok) and pytgtk.
 
 And type :
 
-`cd bubblecrusher && python ui.py`
+`python bubblecrusher/ui.py`
 
 # About
 
