@@ -108,7 +108,7 @@ class field(list):
       if self.filling_counter == -1: # Premier jet : des que 2 lignes sont vides
         for c in self:
           if len(c) > (self.height-2):
-            print 'Do not generate new line'
+            #print 'Do not generate new line'
             return False
         self.filling_counter = 5
         return True

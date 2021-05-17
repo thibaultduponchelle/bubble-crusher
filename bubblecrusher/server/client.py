@@ -19,7 +19,6 @@ if __name__ == "__main__":
     print "Use %s as port number" %(sys.argv[2])
     PORT = int(sys.argv[2])
    
-  
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.connect((HOST, PORT))
 

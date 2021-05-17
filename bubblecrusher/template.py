@@ -53,7 +53,7 @@ class template(list):
     w = bubble()
     b.color = color
 
-    # Des carres
+    # Squares
     if type=='square2x2':
       self.coeff = 8
       self[0][0] = self[0][1] = self[1][0] = self[1][1] = b
@@ -64,12 +64,12 @@ class template(list):
       self.coeff = 8
       self[0][0] = self[0][1] = self[0][2] = self[1][0] = self[1][2] = self[2][0] = self[2][1] = self[2][2] = b 
 
-    # Des cross
+    # Cross
     if type=='cross3x3':
       self.coeff = 8
       self[0][1] = self[1][1] = self[2][1] = self[1][0] = self[1][2] = b
 
-    # Des rectangles
+    # Rectangles
     if type=='rectangle3x2':
       self.coeff = 8
       self[0][0] = self[0][1] = self[1][0] = self[1][1] = self[2][0] = self[2][1] =  b 
@@ -77,7 +77,7 @@ class template(list):
       self.coeff = 8
       self[0][0] = self[0][1] = self[0][2] = self[1][0] = self[1][1] = self[1][2] = self[2][0] = self[2][1] = self[2][2] = b 
 
-    # Des lignes horizontales
+    # Horizontal lines
     if type=='hline4x1':
       self.coeff = 8
       self[0][0] = self[1][0] = self[2][0] = self[3][0] = b
@@ -91,7 +91,7 @@ class template(list):
       self.coeff = 8
       self[0][0] = self[1][0] = self[2][0] = self[3][0] = self[4][0] = self[5][0] = self[6][0] = b
 
-    # Des lignes verticales
+    # Verical lines
     if type=='vline4x1':
       self.coeff = 8
       self[0][0] = self[0][1] = self[0][2] = self[0][3] = b
@@ -119,8 +119,7 @@ class template(list):
       self.coeff = 6
       self[0][0] = self[0][1] = self[1][1] = self[1][2] = b
       
-
-    # Le fork
+    # Fork
     if type=='hupfork3x3': # La version vers le haut
       self.coeff = 6
       self[1][0] = self[1][1] = self[0][1] = self[0][2] = self[2][1] = self[2][2] = b
@@ -134,7 +133,7 @@ class template(list):
       self.coeff = 6
       self[0][0] = self[1][0] = self[0][2] = self[1][2] = self[1][1] = self[2][1] = b
 
-    # Des corner
+    # Corner
     if type=='swcorner3x3':
       self.coeff = 14
       self[0][0] = self[1][0] = self[2][0] = self[0][1] = self[0][2] = self[1][1] = b
@@ -148,7 +147,7 @@ class template(list):
       self.coeff = 14
       self[2][0] = self[2][1] = self[2][2] = self[1][1] = self[1][2] = self[0][2] = b
       
-    # Des bicubes
+    # Bicubes
     if type=='bicube3x3': # La version fusionnee
       self.coeff = 6
       self[0][1] = self[0][2] = self[1][1] = self[1][2] = self[1][0] = self[1][1] = self[2][0] = self[2][1] = b
@@ -156,7 +155,7 @@ class template(list):
       self.coeff = 6
       self[0][2] = self[0][3] = self[1][2] = self[1][3] = self[1][0] = self[1][1] = self[2][0] = self[2][1] = b
       
-    # Le H
+    # H
     if type=='h3x5':
       self.coeff = 20
       self[0][0] = self[0][1] = self[0][2] = self[0][3] = self[0][4] = self[1][2] = self[2][0] = self[2][1] = self[2][2] = self[2][3] = self[2][4] = b
@@ -175,7 +174,7 @@ class template(list):
       self.coeff = 6
       self[2][0] = self[2][1] = self[2][2] = self[1][2] = self[0][2] = b
 
-    # Le T
+    # T
     if type=='t3x3':  # La version classique
       self.coeff = 6
       self[1][0] = self[1][1] = self[0][2] = self[1][2] = self[2][2] = b
@@ -189,7 +188,7 @@ class template(list):
       self.coeff = 6
       self[0][0] = self[0][1] = self[0][2] = self[1][1] = self[2][1] = b
 
-    # Des gull
+    # Gull
     if type=='rightgull2x5' :
       self.coeff = 10
       self[0][0] = self[0][1] = self[0][2] = self[0][3] = self[0][4] = self[1][2] = b
@@ -203,7 +202,7 @@ class template(list):
       self.coeff = 10
       self[0][1] = self[1][1] = self[2][1] = self[3][1] = self[4][1] = self[2][0] = b
     
-    # Des camerton
+    # Camerton
     if type=='upcamerton3x5': # Ouvert en haut
       self.coeff = 20
       self[1][0] = self[1][1] = self[1][2] = self[0][2] = self[0][3] = self[0][4] = self[2][2] = self[2][3] = self[2][4] = b
@@ -218,7 +217,7 @@ class template(list):
       self[0][1] = self[1][1] = self[2][1] = self[2][0] = self[3][0] = self[2][2] = self[3][2] = self[4][0] = self[4][2] = b
 
 
-    # Des wine glass
+    # Wine glass
     if type=='upglass3x5': # Ouvert en haut
       self.coeff = 20
       self[0][0] = self[2][0] = self[1][0] = self[1][1] = self[1][2] = self[0][2] = self[0][3] = self[0][4] = self[2][2] = self[2][3] = self[2][4] = b
@@ -258,35 +257,8 @@ class template(list):
       self.coeff = 20
       self[0][0] = self[1][0] = self[2][0] = self[2][1] = self[0][2] = self[1][2] = self[2][2] = self[2][3] = self[0][3] = self[2][4] = self[1][4] = self[0][4] = b
 
-    # Le big cross
+    # Big cross
     if type=='bigcross5x5':
       self.coeff = 20
       self[2][0] = self[2][1] = self[2][2] = self[2][1] = self[2][3] = self[2][4] = self[0][2] = self[1][2] = self[3][2] = self[4][2] = b
 
-    # OUF !!!!! Y en a marre maintenant grrrrr
-
-      
-      
-      
-      
-
-
-
-
-  
-      
-      
-      
-      
-        
-      
-
-
-      
-
-          
-          
-
-
-
-    
